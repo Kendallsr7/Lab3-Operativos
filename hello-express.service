@@ -1,0 +1,13 @@
+[Unit]
+Description=Hello World con Node.js y Express
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/hello-express
+ExecStart=/usr/bin/node /root/hello-express/app.js
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
